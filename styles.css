@@ -1,0 +1,98 @@
+*,*::before,*::after{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-sizing: border-box;
+}
+:root{
+    --hue-neutral:30;
+    --hue-wrong:0;
+    --hue-correct:145;
+}
+body{
+    --hue:var(--hue-neutral);
+    padding:20px 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100vw;
+    height:100vh;
+    /* background-color: rgb(244, 250, 220); */
+    background-color: hsl(var(--hue), 100%, 40%);
+
+}
+/* body.correct{
+    --hue:var(--hue-correct);
+}
+body.wrong{
+    --hue:var(--hue-wrong);
+} */
+.container{
+    border:3px solid rgb(65, 63, 63);
+    padding:70px 70px;
+    margin:12px 0px;
+    background-color: rgb(243, 197, 243);
+    border-radius: 10px;
+    width:100vw;
+    max-width: 70%;
+    box-shadow: 0 0 10px 3px;
+}
+.questions{
+    display:none;
+}
+#q-container{
+     padding:12px 13px;
+}
+#q-part{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+.options{
+    text-align: center;
+    font-size: 30px;
+    padding:20px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#start,#next{
+    padding:12px 20px;
+    font-size: 20px;
+    cursor:pointer;
+    border:2px solid black;
+    outline:none;
+}
+#start:hover{
+    background-color: rgb(247, 136, 237);
+}
+#next:hover{
+    background-color: rgb(230, 144, 238);
+}
+#ans-buttons{
+    display:grid;
+    grid-template-columns: repeat(2,auto);
+    padding:20px 8px;
+    gap:6px;
+    margin:12px -74px;
+}
+.btn{
+    --hue:var(--hue-neutral);
+    padding:15px 8px;
+    cursor:pointer;
+    border:2px solid black;
+    border-radius: 10px;
+    outline:none;
+    background-color: hsl(var(--hue), 100%, 55%);
+    color:black;
+    font-size: 20px;
+}
+.btn:hover{
+    border-color: white;
+}
+.btn.correct{
+    --hue:var(--hue-correct);
+    color:black;
+}
+.btn.wrong{
+  --hue:var(--hue-wrong);
+  color:white;
+}
